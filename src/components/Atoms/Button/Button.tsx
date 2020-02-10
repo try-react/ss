@@ -4,7 +4,14 @@ import styled from "styled-components";
 type Props = {};
 
 export const Button: FC<Props> = ({ children }) => (
-  <button type="button">{children}</button>
+  <>
+    <ul>
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ul>
+    <button type="button">{children}</button>
+  </>
 );
 
 export const XButton = styled.a`

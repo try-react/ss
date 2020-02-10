@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "test": "echo ok",
+    "prelocal-ci": "circleci config process .circleci/config.yml > process.yml",
+    "local-ci": "circleci local execute -c process.yml"
   },
   "dependencies": {
     "jest": "24.0.0",
