@@ -6,8 +6,7 @@ import createRouter from "router5";
 import browserPlugin from "router5-plugin-browser";
 import { routes } from "~/router/routes";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "~/x/GlobalStyle";
-import { theme } from "~/x/theme";
+import { GlobalStyle, theme } from "~/components/Style";
 
 const router = createRouter(routes);
 router.usePlugin(browserPlugin({ useHash: false }));
