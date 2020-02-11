@@ -1,12 +1,32 @@
 import React, { FC } from "react";
-import styled from "styled-components";
-
-const SH1 = styled.h1``;
-const SP = styled.p``;
 
 export const P1: FC = () => (
-  <>
-    <SH1>猫の一日</SH1>
-    <SP>ひたすら寝ています</SP>
-  </>
+  <form>
+    <label htmlFor="name">名前</label>
+    <input id="name" placeholder="~name~" type="text" />
+
+    <label htmlFor="email">email</label>
+    <input id="email" placeholder="~email~" type="email" />
+
+    <label htmlFor="ra">A</label>
+    <input id="ra" name="r" type="radio" />
+
+    <label htmlFor="rb">B</label>
+    <input id="rb" name="r" type="radio" />
+
+    <label htmlFor="cx">X</label>
+    <input id="cx" name="c" type="checkbox" value="x" />
+
+    <label htmlFor="cy">Y</label>
+    <input id="cy" name="c" type="checkbox" value="y" />
+
+    <select>
+      <option>-</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+    <button type="submit">submit</button>
+  </form>
 );
