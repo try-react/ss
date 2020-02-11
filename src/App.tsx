@@ -1,7 +1,7 @@
-import { Button, XButton } from "~/components/Atoms/Button";
 import { GlobalStyle } from "~/x/GlobalStyle";
-import React, { FC, StrictMode } from "react";
+import React, { FC, StrictMode, lazy, Suspense } from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";
+import { HOC } from "~/util/HOC";
 
 const theme: DefaultTheme = {
   colors: {
@@ -10,14 +10,19 @@ const theme: DefaultTheme = {
   },
 };
 
+const Xxx = lazy(() =>
+  import("~/components/Atoms/Button").then((m) => ({
+    default: HOC(m.Button, { txt: "abc" }),
+  })),
+);
+
 export const App: FC = () => (
-  <>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <StrictMode>
-        <Button>Button</Button>
-        <XButton>XButton</XButton>
-      </StrictMode>
-    </ThemeProvider>
-  </>
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <StrictMode>
+      <Suspense fallback={<div>Please wait...</div>}>
+        <Xxx />
+      </Suspense>
+    </StrictMode>
+  </ThemeProvider>
 );

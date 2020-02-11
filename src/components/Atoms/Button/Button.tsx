@@ -1,13 +1,15 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
-type Props = {};
+type Props = {
+  txt: string;
+};
 
-export const Button: FC<Props> = ({ children }) => (
+export const Button: FC<Props> = ({ children, txt }) => (
   <>
     <ul>
       <li>a</li>
-      <li>b</li>
+      <li>{txt}</li>
       <li>c</li>
     </ul>
     <button type="button">{children}</button>
