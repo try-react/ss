@@ -1,4 +1,5 @@
 export const routes = [
-  { name: "home", path: "/" },
-  { name: "aa", path: "/aa" },
+  { name: "/", path: "/" },
+  { name: "p1", path: "/p1" },
+  { name: "lazy", path: "/lazy" },
 ];
