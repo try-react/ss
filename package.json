@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "predev": "tsc -p config/tsconfig.config.json",
+    "predev": "yarn setting",
     "dev": "webpack-dev-server",
+    "prebuild": "yarn setting",
     "build": "webpack --mode=production",
+    "setting": "tsc -p config/tsconfig.config.json",
     "test": "echo ok",
     "prelocal-ci": "circleci config process .circleci/config.yml > process.yml",
     "local-ci": "circleci local execute -c process.yml"
