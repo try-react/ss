@@ -1,28 +1,10 @@
-import { GlobalStyle } from "~/x/GlobalStyle";
-import React, { FC, StrictMode, lazy, Suspense } from "react";
-import { DefaultTheme, ThemeProvider } from "styled-components";
-import { HOC } from "~/util/HOC";
+import React, { FC, Suspense } from "react";
+import { RoutesComponent } from "~/router/RoutesComponent";
 
-const theme: DefaultTheme = {
-  colors: {
-    main: "palevioletred",
-    secondary: "green",
-  },
+export const App: FC = () => {
+  return (
+    <Suspense fallback={<div>Please wait...</div>}>
+      <RoutesComponent />
+    </Suspense>
+  );
 };
-
-const Xxx = lazy(() =>
-  import("~/components/Atoms/Button").then((m) => ({
-    default: HOC(m.Button, { txt: "abc" }),
-  })),
-);
-
-export const App: FC = () => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <StrictMode>
-      <Suspense fallback={<div>Please wait...</div>}>
-        <Xxx />
-      </Suspense>
-    </StrictMode>
-  </ThemeProvider>
-);

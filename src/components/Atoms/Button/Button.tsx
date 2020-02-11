@@ -5,6 +5,21 @@ type Props = {
   txt: string;
 };
 
+const Button2 = styled.a`
+  background: #668ad8; /* ボタン色 */
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+
+  &:active {
+    border-bottom: none; /* 線を消す */
+    transform: translateY(4px); /* 下に動く */
+  }
+`;
+
 export const Button: FC<Props> = ({ children, txt }) => (
   <>
     <ul>
@@ -12,17 +27,7 @@ export const Button: FC<Props> = ({ children, txt }) => (
       <li>{txt}</li>
       <li>c</li>
     </ul>
-    <button type="button">{children}</button>
+    <Button2>zz</Button2>
+    {/* <button type="button">{children}</button> */}
   </>
 );
-
-export const XButton = styled.a`
-  background: transparent;
-  border: 2px solid white;
-  border-radius: 3px;
-  color: red;
-  display: inline-block;
-  margin: 0.5rem 1rem;
-  padding: 0.5rem 0;
-  width: 11rem;
-`;
