@@ -6,6 +6,7 @@
   "scripts": {
     "predev": "tsc -p config/tsconfig.config.json",
     "dev": "webpack-dev-server",
+    "build": "webpack --mode=production",
     "test": "echo ok",
     "prelocal-ci": "circleci config process .circleci/config.yml > process.yml",
     "local-ci": "circleci local execute -c process.yml"
