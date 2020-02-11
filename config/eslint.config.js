@@ -29,7 +29,6 @@ const config = {
   },
   plugins: ["react", "@typescript-eslint", "sort-keys-fix"],
   rules: {
-    "new-cap": IS.OFF,
     "sort-keys-fix/sort-keys-fix": IS.ERROR,
   },
 };
