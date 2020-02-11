@@ -20,14 +20,12 @@ const Button2 = styled.a`
   }
 `;
 
-export const Button: FC<Props> = ({ children, txt }) => (
+export const Button: FC<Props> = ({ txt }) => (
   <>
     <ul>
       <li>a</li>
       <li>{txt}</li>
-      <li>c</li>
     </ul>
     <Button2>zz</Button2>
-    {/* <button type="button">{children}</button> */}
   </>
 );
