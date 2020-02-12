@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 
-export const P1: FC = () => (
+export const P2: FC = () => (
   <form>
-    <label htmlFor="name">名前</label>
+    <label htmlFor="name">名k前</label>
     <input id="name" placeholder="~name~" type="text" />
 
     <label htmlFor="email">email</label>

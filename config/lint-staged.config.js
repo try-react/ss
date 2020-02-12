@@ -2,7 +2,7 @@ const config = {
   "*.json": ["prettier --write"],
   "*.md": ["prettier --write"],
   "*.yml": ["prettier --write"],
-  "*.{ts,tsx}": ["eslint --fix"],
+  "*.{ts,tsx,js,jsx}": ["eslint --fix"],
   "*.{tsx}": ["stylelint --fix"],
 };
 

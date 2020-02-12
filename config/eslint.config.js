@@ -29,6 +29,10 @@ const config = {
   },
   plugins: ["react", "@typescript-eslint", "sort-keys-fix"],
   rules: {
+    "jsx-a11y/anchor-is-valid": [
+      IS.OFF,
+      { components: ["a"], specialLink: ["to"] },
+    ],
     "new-cap": IS.OFF,
     "sort-keys-fix/sort-keys-fix": IS.ERROR,
   },
