@@ -96,7 +96,7 @@ const FooDiv = () => (
   </div>
 );
 
-export const P2: FC = () => (
+export const Page: FC = () => (
   <>
     <Header />
     <Main>
