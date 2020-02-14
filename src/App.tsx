@@ -1,18 +1,18 @@
 import React, { StrictMode, Suspense, FC } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "~/components/Style";
-import { UIRouter, UIView, pushStateLocationPlugin } from "@uirouter/react";
-import { routes } from "./router/routes";
+import { RouterProvider } from "react-router5";
+import { Route, router } from "~/Route";
 
 export const App: FC = () => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <Suspense fallback={<div>Please wait...</div>}>
-      <UIRouter plugins={[pushStateLocationPlugin]} states={routes}>
-        <StrictMode>
-          <UIView />
-        </StrictMode>
-      </UIRouter>
-    </Suspense>
-  </ThemeProvider>
+  <StrictMode>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <RouterProvider router={router}>
+        <Suspense fallback={<div>Please wait...</div>}>
+          <Route />
+        </Suspense>
+      </RouterProvider>
+    </ThemeProvider>
+  </StrictMode>
 );
