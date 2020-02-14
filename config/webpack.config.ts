@@ -32,7 +32,7 @@ export const base: ConfigurationF = ({ entry, path, template }) => ({
   entry,
   module: { rules },
   output: {
-    filename: "bundle.js",
+    filename: "main.js",
     path,
     publicPath: "/",
   },
