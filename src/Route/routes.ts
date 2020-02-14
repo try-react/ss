@@ -1,15 +1,41 @@
 import createRouter from "router5";
 import browserPlugin from "router5-plugin-browser";
-import { P1 } from "~/components/Environments/P1";
-import { P2 } from "~/components/Environments/P2";
-import { Lazy } from "~/components/Environments/Lazy";
 
 export const routes = [
-  { Component: P1, name: "p1", path: "/p1" },
-  { Component: P2, name: "p2", path: "/p2" },
-  { Component: Lazy, name: "lazy", path: "/lazy" },
+  { name: "p1", path: "/p1" },
+  { name: "p2", path: "/p2" },
+  { name: "lazy", path: "/lazy" },
+  // -----------------------------------
+  {
+    name: "demo1",
+    // id(数値)の指定
+    path: "/demo1/:id<\\d+>",
+  },
+  {
+    children: [
+      {
+        name: "n1",
+        path: "/n1",
+      },
+    ],
+    name: "demo2",
+    path: "/demo2",
+  },
 ];
 
-export const router = createRouter(routes);
+export const router = createRouter(routes, {});
+
+// 依存パラメタ
+// router.setDependencies({ foo: "xxxxxxxxx" });
+// useRouter().getDependencies()
+
+// ミドルウェア
+// const canActivate = (router) => (toState, fromState) => {
+//   console.log("ok");
+//   return true;
+// };
+// router.canActivate("demo2", canActivate);
+
 router.usePlugin(browserPlugin());
+
 router.start();
