@@ -4,6 +4,6 @@ import { lazyFetch } from "~/util/misc";
 
 export const Lazy = lazy(async () => {
   await lazyFetch();
-  const { Button } = await import("~/components/Atoms/Button");
+  const { Button } = await import("~/components/atoms/Button");
   return HOC(Button, { txt: "abc" });
 });

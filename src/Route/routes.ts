@@ -7,15 +7,20 @@ export const routes = [
   { name: "lazy", path: "/lazy" },
   // -----------------------------------
   {
-    name: "demo1",
     // id(数値)の指定
+    name: "demo1",
     path: "/demo1/:id<\\d+>",
   },
   {
+    // nest
     children: [
       {
         name: "n1",
         path: "/n1",
+      },
+      {
+        name: "n2",
+        path: "/n2",
       },
     ],
     name: "demo2",
@@ -24,7 +29,6 @@ export const routes = [
 ];
 
 export const router = createRouter(routes, {});
-
 // 依存パラメタ
 // router.setDependencies({ foo: "xxxxxxxxx" });
 // useRouter().getDependencies()
@@ -37,5 +41,4 @@ export const router = createRouter(routes, {});
 // router.canActivate("demo2", canActivate);
 
 router.usePlugin(browserPlugin());
-
 router.start();

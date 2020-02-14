@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-export const P1: FC = () => (
+export const Form: FC = () => (
   <form>
     <label htmlFor="name">名前</label>
     <input id="name" placeholder="~name~" type="text" />

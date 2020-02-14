@@ -6,12 +6,14 @@
   "scripts": {
     "predev": "yarn setting",
     "dev": "webpack-dev-server",
-    "prebuild": "yarn setting",
+    "prebuild": "yarn setting && rm -rf build",
     "build": "webpack --mode=production",
     "setting": "tsc -p config/tsconfig.config.json",
     "test": "echo ok",
     "prelocal-ci": "circleci config process .circleci/config.yml > process.yml",
-    "local-ci": "circleci local execute -c process.yml"
+    "local-ci": "circleci local execute -c process.yml",
+    "predemo": "yarn build",
+    "demo": "docker-compose up -d && open http://127.0.0.1:8080/"
   },
   "dependencies": {
     "@babel/core": "7.8.4",
