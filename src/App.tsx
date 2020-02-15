@@ -4,6 +4,8 @@ import { GlobalStyle, theme } from "~/components/Style";
 import { RouterProvider } from "react-router5";
 import { Route, router } from "~/Route";
 
+router.start();
+
 export const App: FC = () => (
   <StrictMode>
     <ThemeProvider theme={theme}>
