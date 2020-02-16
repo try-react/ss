@@ -8,17 +8,17 @@ export const router = createRouter(routes, {
 });
 
 const mwStarted = () => (_, __, done) => {
-  console.log("変化前");
+  console.log("URL 変化前");
   done();
 };
 const mwDone = () => (_, __, done) => {
-  console.log("変化後");
+  console.log("URL 変化後");
   done();
 };
 
-router.useMiddleware(mwStarted);
+router.useMiddleware(mwStarted); // URL 変化前
 router.useMiddleware(mw(routes));
-router.useMiddleware(mwDone);
+router.useMiddleware(mwDone); // URL 変化後
 router.usePlugin(browserPlugin());
 
 // 依存パラメタ

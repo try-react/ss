@@ -21,7 +21,7 @@ export const Route: FC = () => {
   if (match("p1")) return <P1 />;
   if (match("p2")) return <P2 />;
   if (match("some")) return <Some />; // Suspense
-  if (match("demo1.id")) return <Demo11X />; // demo:id
+  if (match("demo1.id")) return <Demo11X />; // demo/:id
   if (match("demo1")) return <Demo10 />;
   if (match("demo2.n1")) return <Demo21 />;
   if (match("demo2.n2")) return <Demo22 />;
