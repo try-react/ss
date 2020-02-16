@@ -5,7 +5,7 @@ import { RouterProvider } from "react-router5";
 import { router } from "~/service/route";
 import { theme } from "~/service/theme";
 
-router.start();
+const Pro = () => <div>プログレスバー</div>;
 
 export class App extends React.PureComponent {
   render() {
@@ -14,7 +14,7 @@ export class App extends React.PureComponent {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <RouterProvider router={router}>
-            <div>プログレスバー</div>
+            <Pro />
             <Suspense fallback={null}>
               <ErrorBoundary>
                 <Route />

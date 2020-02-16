@@ -3,34 +3,35 @@ import { routes } from "./routes";
 import { mw } from "./middleware";
 import browserPlugin from "router5-plugin-browser";
 
-export const router = createRouter(routes, {
-  defaultRoute: "top",
+const lifeCycle = () => ({
+  onTransitionStart: () => {
+    console.log("ssssssssss");
+  },
+  onTransitionSuccess: () => {
+    console.log("eeeeeeeee");
+  },
 });
 
-const mwStarted = () => (_, __, done) => {
-  console.log("URL 変化前");
-  done();
-};
-const mwDone = () => (_, __, done) => {
-  console.log("URL 変化後");
-  done();
-};
+const _router = createRouter(routes, {
+  defaultRoute: "top",
+});
+_router.useMiddleware(mw(routes));
+_router.usePlugin(browserPlugin());
+_router.usePlugin(lifeCycle);
+_router.start();
 
-router.useMiddleware(mwStarted); // URL 変化前
-router.useMiddleware(mw(routes));
-router.useMiddleware(mwDone); // URL 変化後
-router.usePlugin(browserPlugin());
+export const router = _router;
 
 // 依存パラメタ
 // ---------------------------------------------------------
-// router.setDependencies({ foo: "xxxxxxxxx" });
+// _router.setDependencies({ foo: "xxxxxxxxx" });
 // useRouter().getDependencies()
 // ---------------------------------------------------------
 
 // アクセス制限
 // ---------------------------------------------------------
-// const canActivate = (router) => (toState, fromState) => {
+// const canActivate = (_router) => (toState, fromState) => {
 //   return false;
 // };
-// router.canActivate("some", canActivate);
+// _router.canActivate("some", canActivate);
 // ---------------------------------------------------------
