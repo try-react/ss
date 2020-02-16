@@ -1,20 +1,28 @@
-import React, { StrictMode, Suspense, FC } from "react";
+import React, { StrictMode, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle, theme } from "~/components/Style";
+import { GlobalStyle, ErrorBoundary, Route } from "~/components/service";
 import { RouterProvider } from "react-router5";
-import { Route, router } from "~/Route";
+import { router } from "~/service/route";
+import { theme } from "~/service/theme";
 
 router.start();
 
-export const App: FC = () => (
-  <StrictMode>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <RouterProvider router={router}>
-        <Suspense fallback={<div>Please wait...</div>}>
-          <Route />
-        </Suspense>
-      </RouterProvider>
-    </ThemeProvider>
-  </StrictMode>
-);
+export class App extends React.PureComponent {
+  render() {
+    return (
+      <StrictMode>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <RouterProvider router={router}>
+            <div>プログレスバー</div>
+            <Suspense fallback={null}>
+              <ErrorBoundary>
+                <Route />
+              </ErrorBoundary>
+            </Suspense>
+          </RouterProvider>
+        </ThemeProvider>
+      </StrictMode>
+    );
+  }
+}

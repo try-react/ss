@@ -33,7 +33,7 @@ const ButtonDom: FC<ButtonDomProps> = ({ id, setX, txt }) => (
 );
 
 const SubstituteButton: FC = ({ children }) => (
-  <Suspense fallback={<div>~[ぼたん準備中]~</div>}>{children}</Suspense>
+  <Suspense fallback={<div>~[初期値取得中]~</div>}>{children}</Suspense>
 );
 
 type Props = { useButton: () => ButtonDomProps };

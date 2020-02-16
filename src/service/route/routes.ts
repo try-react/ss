@@ -1,8 +1,6 @@
-import { Route } from "router5";
+import { lazyFetch } from "~/util/misc";
 
-export type CustomRoute = Route & { loadComponent?: any };
-
-export const routes: CustomRoute[] = [
+export const routes = [
   { name: "top", path: "/" },
   {
     name: "p1",
@@ -38,6 +36,7 @@ export const routes: CustomRoute[] = [
       },
     ],
     name: "demo2",
+    onActivate: () => lazyFetch(),
     path: "/demo2",
   },
 ];

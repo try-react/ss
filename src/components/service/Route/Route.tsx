@@ -13,15 +13,15 @@ import { Top } from "~/components/environments/top";
 
 export const Route: FC = () => {
   const { route } = useRoute();
-  if (!route) return <>404</>;
+  if (!route) return <></>;
 
   const match = startsWithSegment(route.name);
 
   if (match("top")) return <Top />;
   if (match("p1")) return <P1 />;
   if (match("p2")) return <P2 />;
-  if (match("some")) return <Some />;
-  if (match("demo1.id")) return <Demo11X />;
+  if (match("some")) return <Some />; // Suspense
+  if (match("demo1.id")) return <Demo11X />; // demo:id
   if (match("demo1")) return <Demo10 />;
   if (match("demo2.n1")) return <Demo21 />;
   if (match("demo2.n2")) return <Demo22 />;
