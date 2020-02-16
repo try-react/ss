@@ -2,15 +2,7 @@ import createRouter from "router5";
 import { routes } from "./routes";
 import { mw } from "./middleware";
 import browserPlugin from "router5-plugin-browser";
-
-const lifeCycle = () => ({
-  onTransitionStart: () => {
-    console.log("ssssssssss");
-  },
-  onTransitionSuccess: () => {
-    console.log("eeeeeeeee");
-  },
-});
+import { lifeCycle } from "./aaaaaaaaa";
 
 const _router = createRouter(routes, {
   defaultRoute: "top",
