@@ -1,8 +1,8 @@
 import { lazy } from "react";
+import { HOC } from "~/components/service/HOC";
 
-export const Demo11X = lazy(async () => {
-  const { Router5Demo11X } = await import(
-    "~/components/ecosystems/Router5Demo"
-  );
-  return { default: Router5Demo11X };
-});
+export const Demo11X = lazy(() =>
+  import("~/components/ecosystems/Router5Demo").then(({ Router5Demo11X }) =>
+    HOC(Router5Demo11X, {}),
+  ),
+);
