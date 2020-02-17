@@ -1,11 +1,10 @@
 import React, { StrictMode, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle, ErrorBoundary, Route } from "~/components/service";
+import { GlobalStyle, ErrorBoundary } from "~/components/service";
 import { RouterProvider } from "react-router5";
 import { router } from "~/service/route";
 import { theme } from "~/service/theme";
-
-const Pro = () => <div>プログレスバー</div>;
+import { Page } from "~/components/service/Page";
 
 export class App extends React.PureComponent {
   render() {
@@ -14,10 +13,9 @@ export class App extends React.PureComponent {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <RouterProvider router={router}>
-            <Pro />
             <Suspense fallback={null}>
               <ErrorBoundary>
-                <Route />
+                <Page />
               </ErrorBoundary>
             </Suspense>
           </RouterProvider>

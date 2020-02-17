@@ -1,3 +1,7 @@
+/**
+ * Suspense 動作確認用
+ */
+
 import { useEffect, useState } from "react";
 import { lazyFetch } from "~/util/misc";
 
@@ -10,9 +14,6 @@ const fetchS = () => {
   });
 };
 
-/**
- * init 変数初期化用
- */
 const useUnMount = () => {
   useEffect(
     () => () => {
@@ -22,10 +23,6 @@ const useUnMount = () => {
   );
 };
 
-/**
- * `init === false` の場合
- * `throw Promise` |> 戻り値のセット
- */
 export const useButton = () => {
   useUnMount();
   !init && fetchS();

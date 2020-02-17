@@ -1,5 +1,11 @@
 import React, { FC } from "react";
 
-export const Router5Demo22: FC = () => {
-  return <>Router5Demo22</>;
+type Props = {
+  data: {
+    id: number;
+  };
+};
+
+export const Router5Demo22: FC<Props> = ({ data }) => {
+  return <>Router5Demo22 id: {data.id}</>;
 };

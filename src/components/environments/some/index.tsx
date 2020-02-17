@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { HOC } from "~/components/service/HOC";
-import { useButton } from "~/useCase/useButton";
+import { useButton } from "~/hooks/useButton";
 
 // TODO
 // 遷移中をひろって プログレスバー

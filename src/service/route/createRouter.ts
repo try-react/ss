@@ -1,16 +1,14 @@
 import createRouter from "router5";
-import { routes } from "./routes";
-import { mw } from "./middleware";
+import { routes, defaultRoute } from "./routes";
 import browserPlugin from "router5-plugin-browser";
-import { lifeCycle } from "./aaaaaaaaa";
+import { lifeCycle } from "./middleware/lifeCycle";
+import { preMakeComponent } from "./middleware/preMakeComponent";
 
 const _router = createRouter(routes, {
-  defaultRoute: "top",
+  defaultRoute,
 });
-_router.useMiddleware(mw(routes));
-_router.usePlugin(browserPlugin());
-_router.usePlugin(lifeCycle);
-_router.start();
+_router.usePlugin(browserPlugin(), lifeCycle);
+_router.useMiddleware(preMakeComponent);
 
 export const router = _router;
 
