@@ -1,9 +1,9 @@
 import { routes } from "~/service/route";
 import { Router } from "router5";
 
-type PreMakeComponent = Parameters<Router["useMiddleware"]>[0];
+type OnActivate = Parameters<Router["useMiddleware"]>[0];
 
-export const preMakeComponent: PreMakeComponent = () => async (toState) => {
+export const onActivate: OnActivate = () => async (toState) => {
   const fn = routes.find((p) => p.name === toState.name)?._meta?.onActivate;
 
   if (!fn) {

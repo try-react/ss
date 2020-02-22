@@ -1,15 +1,19 @@
 import React, { FC } from "react";
-import { SimpleLabel } from "~/components/atoms/Label";
+import { SimpleLabel, SimpleLabelSuspense } from "~/components/atoms/Label";
+import { HOCLazyFetch } from "~/container/HOC/HOCLazyFetch";
+import { useLazyFetch } from "~/hook/useLazyFetch";
 
-type Props = {} & Parameters<typeof SimpleLabel>[0];
+const LazySimpleLabel = HOCLazyFetch<ReturnType<typeof useLazyFetch>>({
+  InnerComponent: SimpleLabel,
+  SuspenseComponent: SimpleLabelSuspense,
+  suspenseHook: useLazyFetch,
+});
 
-export const Lazy: FC<Props> = ({ useLazyFetchId }) => {
-  return (
-    <>
-      <div>~ローディングに関係無い部分~</div>
-      <div>
-        <SimpleLabel {...{ useLazyFetchId }} />
-      </div>
-    </>
-  );
-};
+export const Lazy: FC = () => (
+  <>
+    <div>~ローディングに関係無い部分~</div>
+    <div>
+      <LazySimpleLabel />
+    </div>
+  </>
+);

@@ -2,13 +2,13 @@ import createRouter from "router5";
 import { routes, defaultRoute } from "./routes";
 import browserPlugin from "router5-plugin-browser";
 import { lifeCycle } from "./middleware/lifeCycle";
-import { preMakeComponent } from "./middleware/preMakeComponent";
+import { onActivate } from "./middleware/onActivate";
 
 const _router = createRouter(routes, {
   defaultRoute,
 });
 _router.usePlugin(browserPlugin(), lifeCycle);
-_router.useMiddleware(preMakeComponent);
+_router.useMiddleware(onActivate);
 
 export const router = _router;
 
