@@ -1,5 +1,5 @@
 import React from "react";
-import { App } from "~/components/service";
+import { App } from "~/container/App";
 import { render } from "react-dom";
 import { router } from "~/service/route";
 import { progressService } from "~/state";

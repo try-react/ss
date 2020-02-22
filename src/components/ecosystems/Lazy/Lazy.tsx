@@ -1,14 +1,14 @@
 import React, { FC } from "react";
-import { Button } from "~/components/atoms/Button";
+import { SimpleLabel } from "~/components/atoms/Label";
 
-type Props = {} & Parameters<typeof Button>[0];
+type Props = {} & Parameters<typeof SimpleLabel>[0];
 
-export const Lazy: FC<Props> = ({ useButton }) => {
+export const Lazy: FC<Props> = ({ useLazyFetchId }) => {
   return (
     <>
       <div>~ローディングに関係無い部分~</div>
       <div>
-        <Button {...{ useButton }} />
+        <SimpleLabel {...{ useLazyFetchId }} />
       </div>
     </>
   );

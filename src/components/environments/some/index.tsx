@@ -1,6 +1,6 @@
 import { lazy } from "react";
-import { HOC } from "~/components/service/HOC";
-import { useButton } from "~/hooks/useButton";
+import { HOC } from "~/container/HOC";
+import { useLazyFetchId } from "~/hook/useLazyFetchId";
 
 // TODO
 // 遷移中をひろって プログレスバー
@@ -17,6 +17,6 @@ import { useButton } from "~/hooks/useButton";
 
 export const Some = lazy(() =>
   import("~/components/ecosystems/Lazy").then(({ Lazy }) =>
-    HOC(Lazy, { useButton }),
+    HOC(Lazy, { useLazyFetchId }),
   ),
 );

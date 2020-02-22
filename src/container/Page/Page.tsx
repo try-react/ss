@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { Route } from "~/components/service";
+import { Route } from "~/container/Route";
 import { Progress } from "~/components/atoms/Progress";
-import { useProgress } from "~/hooks/useProgress";
+import { useProgress } from "~/hook/useProgress";
 
 export const Page: FC = () => (
   <>

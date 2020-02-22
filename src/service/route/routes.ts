@@ -1,6 +1,5 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import { lazyFetch } from "~/util/misc";
-import { Demo22 } from "~/components/environments/demo2/n2";
 
 export const defaultRoute = "top";
 
@@ -37,9 +36,7 @@ export const routes = [
     path: "/n2",
     _meta: {
       onActivate: () => lazyFetch(),
-      loadComponent: Demo22,
+      data: {},
     },
   },
 ];
-
-// TODO rootも XState すれば全体がみえる？

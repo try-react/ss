@@ -1,4 +1,7 @@
 /**
+ * !! バグあり
+ * 画面に出入りすると 前回の状態がのこっている lazyFetchをキャンセルできないため
+ *
  * Suspense 動作確認用
  */
 
@@ -23,7 +26,7 @@ const useUnMount = () => {
   );
 };
 
-export const useButton = () => {
+export const useLazyFetchId = () => {
   useUnMount();
   !init && fetchS();
   const [x, setX] = useState(data);
