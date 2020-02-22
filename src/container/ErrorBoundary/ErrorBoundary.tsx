@@ -15,8 +15,9 @@ export class ErrorBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info?: ReactErrorInfo) {
-    // TODO 動作検証
-    console.error(error, info);
+    console.log(error);
+    console.log(info);
+    this.setState({ error: error });
   }
 
   render() {

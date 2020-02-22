@@ -43,5 +43,3 @@ export const Progress: FC<Props> = ({
     </div>
   </div>
 );
-
-// TODO styled components化

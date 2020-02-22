@@ -26,10 +26,9 @@ const useUnMount = () => {
   );
 };
 
-export const useLazyFetchId = () => {
+export const useLazyFetch = () => {
   useUnMount();
   !init && fetchS();
-  const [x, setX] = useState(data);
-  const { id } = x;
-  return { id, setX, txt: "foo" };
+  const { id } = useState(data)[0];
+  return { id };
 };
