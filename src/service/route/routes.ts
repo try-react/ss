@@ -10,6 +10,7 @@ export const routes = [
     path: "/p1",
   },
   { name: "p2", path: "/p2" },
+  { name: "p3", path: "/p3" },
   {
     name: "some",
     path: "/some",

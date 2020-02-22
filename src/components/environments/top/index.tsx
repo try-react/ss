@@ -22,6 +22,11 @@ export const Top: FC = () => {
         </BaseLink>
       </li>
       <li>
+        <BaseLink router={router} routeName="p3">
+          p3
+        </BaseLink>
+      </li>
+      <li>
         <BaseLink router={router} routeName="some">
           some
         </BaseLink>
