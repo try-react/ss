@@ -1,11 +1,11 @@
 import React, { StrictMode, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "~/container/Style";
-import { ErrorBoundary } from "~/container/ErrorBoundary";
+import { GlobalStyle } from "~/containers/Style";
+import { ErrorBoundary } from "~/containers/ErrorBoundary";
 import { RouterProvider } from "react-router5";
 import { router } from "~/service/route";
 import { theme } from "~/service/theme";
-import { Page } from "~/container/Page";
+import { Page } from "~/containers/Page";
 
 export class App extends React.PureComponent {
   render() {
