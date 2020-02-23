@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import { useRoute } from "react-router5";
 import { P1 } from "~/components/environments/p1";
 import { P2 } from "~/components/environments/p2";
+import { P3 } from "~/components/environments/p3";
+import { P4 } from "~/components/environments/p4";
 import { Some } from "~/components/environments/some";
 import { Demo10 } from "~/components/environments/demo1";
 import { Demo11X } from "~/components/environments/demo1/_id";
@@ -17,6 +19,8 @@ export const Route: FC = () => {
   if (route.name === "top") return <Top />;
   if (route.name === "p1") return <P1 />;
   if (route.name === "p2") return <P2 />;
+  if (route.name === "p3") return <P3 />;
+  if (route.name === "p4") return <P4 />;
   if (route.name === "some") return <Some />; // Suspense
   if (route.name === "demo1.id") return <Demo11X />; // demo/:id
   if (route.name === "demo1") return <Demo10 />;

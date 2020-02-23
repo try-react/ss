@@ -22,10 +22,11 @@ type P = {
   entry: Configuration["entry"];
   path: Output["path"];
   template: Options["template"];
+  favicon: Options["favicon"];
 };
 
 type ConfigurationF = (p: P) => Configuration;
-export const base: ConfigurationF = ({ entry, path, template }) => ({
+export const base: ConfigurationF = ({ entry, path, template, favicon }) => ({
   devServer: {
     historyApiFallback: true,
   },
@@ -36,7 +37,7 @@ export const base: ConfigurationF = ({ entry, path, template }) => ({
     path,
     publicPath: "/",
   },
-  plugins: [new HtmlWebpackPlugin({ template })],
+  plugins: [new HtmlWebpackPlugin({ favicon, template })],
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
   },

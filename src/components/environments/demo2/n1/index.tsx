@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { HOC } from "~/container/HOC";
+import { HOC } from "~/containers/HOC";
 
 export const Demo21 = lazy(() =>
   import("~/components/ecosystems/Router5Demo").then(({ Router5Demo21 }) =>
