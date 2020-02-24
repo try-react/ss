@@ -6,3 +6,6 @@ export const Demo22 = lazy(() =>
     HOC(Router5Demo22, {}),
   ),
 );
+
+export const getDemo22InitProps = async () =>
+  (await import("~/util/misc").then(({ lazyFetch }) => lazyFetch))();

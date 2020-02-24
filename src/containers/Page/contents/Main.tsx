@@ -15,13 +15,13 @@ import { Demo22 } from "~/components/environments/demo2/n2";
 import { Top } from "~/components/environments/top";
 
 const throwError = () => {
-  throw Error("危険が危ない");
+  throw Error("🤬 危険が危ない 🤬");
 };
 
 export const Main: FC = () => {
   const { route } = useRoute();
 
-  if (!route) return <></>;
+  if (!route) return <Top />; // デフォルト
   if (route.name === "top") return <Top />;
   if (route.name === "p1") return <P1 />;
   if (route.name === "p2") return <P2 />;
