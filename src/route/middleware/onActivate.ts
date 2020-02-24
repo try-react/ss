@@ -1,4 +1,4 @@
-import { routes } from "~/service/route";
+import { routes } from "~/route";
 import { Router } from "router5";
 
 type OnActivate = Parameters<Router["useMiddleware"]>[0];

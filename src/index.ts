@@ -1,7 +1,7 @@
 import React from "react";
 import { App } from "~/containers/App";
 import { render } from "react-dom";
-import { router } from "~/service/route";
+import { router } from "~/route";
 import { progressService } from "~/state";
 
 const init = () => {

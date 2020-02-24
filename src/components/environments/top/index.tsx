@@ -33,6 +33,21 @@ export const Top: FC = () => {
           </BaseLink>
         </li>
         <li>
+          <BaseLink router={router} routeName="p5">
+            p5 FlexBox
+          </BaseLink>
+        </li>
+        <li>
+          <BaseLink router={router} routeName="p6">
+            p6
+          </BaseLink>
+        </li>
+        <li>
+          <BaseLink router={router} routeName="p7">
+            p7
+          </BaseLink>
+        </li>
+        <li>
           <BaseLink router={router} routeName="some">
             some
           </BaseLink>

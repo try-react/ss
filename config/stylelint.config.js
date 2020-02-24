@@ -5,6 +5,7 @@ const config = {
   rules: {
     "declaration-empty-line-before": "never",
     "order/properties-alphabetical-order": true,
+    "value-keyword-case": null,
   },
 };
 module.exports = config;
