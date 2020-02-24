@@ -1,4 +1,4 @@
-import React, { StrictMode, Suspense, FC } from "react";
+import React, { StrictMode, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "~/containers/Style";
 import { ErrorBoundary } from "~/containers/ErrorBoundary";
@@ -13,13 +13,13 @@ export class App extends React.PureComponent {
       <StrictMode>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <RouterProvider router={router}>
-            <Suspense fallback={null}>
-              <ErrorBoundary>
+          <ErrorBoundary>
+            <RouterProvider router={router}>
+              <Suspense fallback={null}>
                 <Page />
-              </ErrorBoundary>
-            </Suspense>
-          </RouterProvider>
+              </Suspense>
+            </RouterProvider>
+          </ErrorBoundary>
         </ThemeProvider>
       </StrictMode>
     );

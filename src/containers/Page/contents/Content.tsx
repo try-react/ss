@@ -1,10 +1,30 @@
-import React, { FC } from "react";
-import { useRoute } from "react-router5";
-import { router } from "~/route";
-import { throwError } from "~/util/misc";
+import React, { FC, useEffect, useState } from "react";
+import { Subject } from "rxjs";
+
+export const subject = new Subject<FC<{}>>();
+
+const useComponent = () => {
+  const C: FC = () => <></>;
+  const [Component, setComponent] = useState({ Component: C });
+  return { Component, setComponent };
+};
+
+const useContent = () => {
+  const { Component, setComponent } = useComponent();
+
+  useEffect(() => {
+    subject.subscribe({
+      next: (p) => {
+        setComponent({ Component: p });
+      },
+    });
+  }, [setComponent]);
+
+  return Component;
+};
 
 export const Content: FC = () => {
-  if (!useRoute().route) return <>準備中✍️...</>;
-  const C = router.getDependencies();
-  return C.Content ? <C.Content /> : throwError("Contentが見つからない");
+  const C = useContent();
+
+  return <C.Component />;
 };
