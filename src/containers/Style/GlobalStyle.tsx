@@ -46,9 +46,9 @@ body {
   line-height: 1;
 }
 
-ol,
+/* ol,
 ul {
   list-style: none;
   list-style-type: none;
-}
+} */
 `;

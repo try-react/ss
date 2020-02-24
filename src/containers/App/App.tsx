@@ -1,10 +1,10 @@
-import React, { StrictMode, Suspense } from "react";
+import React, { StrictMode, Suspense, FC } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "~/containers/Style";
 import { ErrorBoundary } from "~/containers/ErrorBoundary";
 import { RouterProvider } from "react-router5";
-import { router } from "~/service/route";
-import { theme } from "~/service/theme";
+import { router } from "~/route";
+import { theme } from "~/theme";
 import { Page } from "~/containers/Page";
 
 export class App extends React.PureComponent {

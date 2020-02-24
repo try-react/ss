@@ -12,6 +12,9 @@ export const routes = [
   { name: "p2", path: "/p2" },
   { name: "p3", path: "/p3" },
   { name: "p4", path: "/p4" },
+  { name: "p5", path: "/p5" },
+  { name: "p6", path: "/p6" },
+  { name: "p7", path: "/p7" },
   {
     name: "some",
     path: "/some",

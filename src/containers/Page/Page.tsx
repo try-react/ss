@@ -1,11 +1,16 @@
 import React, { FC } from "react";
-import { Route } from "~/containers/Route";
-import { Progress } from "~/components/atoms/Progress";
-import { useProgress } from "~/hooks/useProgress";
+import { Main } from "./contents/Main";
+import { Header } from "./contents/Header";
 
 export const Page: FC = () => (
   <>
-    <Progress {...useProgress()} />
-    <Route />
+    <header>
+      <Header />
+    </header>
+    <main>
+      <Main />
+    </main>
+    <aside />
+    <footer />
   </>
 );
