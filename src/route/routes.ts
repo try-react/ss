@@ -1,8 +1,6 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
-import createRouter from "router5";
 
-type Routes = Parameters<typeof createRouter>[0];
-export const routes: Routes = [
+export const routes = [
   { name: "top", path: "/" },
   { name: "p1", path: "/p1" },
   { name: "p2", path: "/p2" },

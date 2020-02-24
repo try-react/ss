@@ -5,3 +5,7 @@ export const lazyFetch = () =>
   new Promise<{ id: number }>((resolve) =>
     setTimeout(() => resolve(getId()), env.lazyTimeMs),
   );
+
+export const throwError = (msg: string) => {
+  throw Error(`🤬${msg}🤬`);
+};
