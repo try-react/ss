@@ -4,9 +4,7 @@
 import { createMachine, interpret } from "xstate";
 
 type Context = { Transitioning: "transitioning" } | { Done: "done" };
-
 type Event = { type: "Transitioning" } | { type: "Done" };
-
 type State =
   | {
       value: "done";

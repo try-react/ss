@@ -1,22 +1,14 @@
 import createRouter from "router5";
-import { routes, defaultRoute } from "./routes";
+import { routes } from "./routes";
 import browserPlugin from "router5-plugin-browser";
-import { lifeCycle } from "./middleware/lifeCycle";
-import { onActivate } from "./middleware/onActivate";
+import { lifeCycle } from "./lifeCycle";
+import { middleware } from "./middleware";
 
-const _router = createRouter(routes, {
-  defaultRoute,
-});
+const _router = createRouter(routes);
 _router.usePlugin(browserPlugin(), lifeCycle);
-_router.useMiddleware(onActivate);
+_router.useMiddleware(middleware);
 
 export const router = _router;
-
-// 依存パラメタ
-// ---------------------------------------------------------
-// _router.setDependencies({ foo: "xxxxxxxxx" });
-// useRouter().getDependencies()
-// ---------------------------------------------------------
 
 // アクセス制限
 // ---------------------------------------------------------
