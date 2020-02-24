@@ -10,12 +10,6 @@ _router.useMiddleware(middleware);
 
 export const router = _router;
 
-// 依存パラメタ
-// ---------------------------------------------------------
-// _router.setDependencies({ foo: "xxxxxxxxx" });
-// useRouter().getDependencies()
-// ---------------------------------------------------------
-
 // アクセス制限
 // ---------------------------------------------------------
 // const canActivate = (_router) => (toState, fromState) => {

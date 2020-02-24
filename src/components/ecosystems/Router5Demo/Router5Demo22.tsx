@@ -1,17 +1,15 @@
 import React, { FC } from "react";
-import { useRoute } from "react-router5";
+import { useRouter } from "react-router5";
 
-type _Meta = {
-  _meta: {
-    data: {
-      id: number;
-    };
+type Data = {
+  data: {
+    id: number;
   };
 };
 
 export const Router5Demo22: FC = () => {
-  const { route } = useRoute();
-  const { data } = ((route as unknown) as _Meta)._meta;
+  const { getDependencies } = useRouter();
+  const { data } = getDependencies();
 
-  return <>Router5Demo22 id: {data.id}</>;
+  return <>Router5Demo22 id: {data.id} </>;
 };

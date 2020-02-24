@@ -21,7 +21,7 @@ const throwError = () => {
 export const Main: FC = () => {
   const { route } = useRoute();
 
-  if (!route) return <Top />; // デフォルト
+  if (!route) return <>準備中✍️...</>;
   if (route.name === "top") return <Top />;
   if (route.name === "p1") return <P1 />;
   if (route.name === "p2") return <P2 />;
