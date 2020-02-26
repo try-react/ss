@@ -1,5 +1,7 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 
+import { create as x } from "~/components/environments/demo2/n2";
+
 export const routes = [
   {
     name: "top",
