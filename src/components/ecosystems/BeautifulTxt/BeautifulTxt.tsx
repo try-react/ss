@@ -28,7 +28,6 @@ const StyledP3 = styled.p`
 `;
 
 const StyledP4 = styled.p`
-  font-family: Lacquer, sans-serif;
   font-size: 16px;
 `;
 

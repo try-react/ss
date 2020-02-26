@@ -7,9 +7,9 @@ export const routes = [
     path: "/",
     _meta: {
       createContent: () =>
-        import(/* webpackPreload: true */ "~/components/environments/top").then(
-          ({ Component }) => Component,
-        ),
+        import(
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/top"
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -17,9 +17,9 @@ export const routes = [
     path: "/p1",
     _meta: {
       createContent: () =>
-        import(/* webpackPreload: true */ "~/components/environments/p1").then(
-          ({ Component }) => Component,
-        ),
+        import(
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/p1"
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -27,9 +27,9 @@ export const routes = [
     path: "/p3",
     _meta: {
       createContent: () =>
-        import(/* webpackPreload: true */ "~/components/environments/p3").then(
-          ({ Component }) => Component,
-        ),
+        import(
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/p3"
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -37,9 +37,9 @@ export const routes = [
     path: "/p4",
     _meta: {
       createContent: () =>
-        import(/* webpackPreload: true */ "~/components/environments/p4").then(
-          ({ Component }) => Component,
-        ),
+        import(
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/p4"
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -47,9 +47,9 @@ export const routes = [
     path: "/p5",
     _meta: {
       createContent: () =>
-        import(/* webpackPreload: true */ "~/components/environments/p5").then(
-          ({ Component }) => Component,
-        ),
+        import(
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/p5"
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -57,9 +57,9 @@ export const routes = [
     path: "/p6",
     _meta: {
       createContent: () =>
-        import(/* webpackPreload: true */ "~/components/environments/p6").then(
-          ({ Component }) => Component,
-        ),
+        import(
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/p6"
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -67,9 +67,9 @@ export const routes = [
     path: "/p7",
     _meta: {
       createContent: () =>
-        import(/* webpackPreload: true */ "~/components/environments/p7").then(
-          ({ Component }) => Component,
-        ),
+        import(
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/p7"
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -78,7 +78,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPreload: true */ "~/components/environments/some"
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/some"
         ).then(({ Component }) => Component),
     },
   },
@@ -88,7 +88,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPreload: true */ "~/components/environments/demo1"
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/demo1"
         ).then(({ Component }) => Component),
     },
   },
@@ -98,7 +98,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPreload: true */ "~/components/environments/demo1/_id"
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/demo1/_id"
         ).then(({ Component }) => Component),
     },
   },
@@ -108,7 +108,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPreload: true */ "~/components/environments/demo2"
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/demo2"
         ).then(({ Component }) => Component),
     },
   },
@@ -118,7 +118,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPreload: true */ "~/components/environments/demo2/n1"
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/demo2/n1"
         ).then(({ Component }) => Component),
     },
   },
@@ -130,7 +130,7 @@ export const routes = [
         const { lazyFetch } = await import("~/util/misc");
         const data = await lazyFetch();
         return import(
-          /* webpackPreload: true */ "~/components/environments/demo2/n2"
+          /* webpackPrefetch: true */ /* webpackPreload: true */ "~/components/environments/demo2/n2"
         ).then(async ({ Component }) => HOC(Component, { data }));
       },
     },
