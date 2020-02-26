@@ -1,17 +1,114 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 
 export const routes = [
-  { name: "top", path: "/" },
-  { name: "p1", path: "/p1" },
-  { name: "p3", path: "/p3" },
-  { name: "p4", path: "/p4" },
-  { name: "p5", path: "/p5" },
-  { name: "p6", path: "/p6" },
-  { name: "p7", path: "/p7" },
-  { name: "some", path: "/some" },
-  { name: "demo1", path: "/demo1" },
-  { name: "demo1.id", path: "/:id<\\d+>" }, // id(数値)の指定
-  { name: "demo2", path: "/demo2" },
-  { name: "demo2.n1", path: "/n1" },
-  { name: "demo2.n2", path: "/n2" },
+  {
+    name: "top",
+    path: "/",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/top").then(({ create }) => create),
+    },
+  },
+  {
+    name: "p1",
+    path: "/p1",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/p1").then(({ create }) => create),
+    },
+  },
+  {
+    name: "p3",
+    path: "/p3",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/p3").then(({ create }) => create),
+    },
+  },
+  {
+    name: "p4",
+    path: "/p4",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/p4").then(({ create }) => create),
+    },
+  },
+  {
+    name: "p5",
+    path: "/p5",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/p5").then(({ create }) => create),
+    },
+  },
+  {
+    name: "p6",
+    path: "/p6",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/p6").then(({ create }) => create),
+    },
+  },
+  {
+    name: "p7",
+    path: "/p7",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/p7").then(({ create }) => create),
+    },
+  },
+  {
+    name: "some",
+    path: "/some",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/some").then(({ create }) => create),
+    },
+  },
+  {
+    name: "demo1",
+    path: "/demo1",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/demo1").then(({ create }) => create),
+    },
+  },
+  {
+    name: "demo1/id",
+    path: "/:id<\\d+>", // id(数値)の指定
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/demo1/_id").then(
+          ({ create }) => create,
+        ),
+    },
+  },
+  {
+    name: "demo2",
+    path: "/demo2",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/demo2").then(({ create }) => create),
+    },
+  },
+  {
+    name: "demo2/n1",
+    path: "/n1",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/demo2/n1").then(
+          ({ create }) => create,
+        ),
+    },
+  },
+  {
+    name: "demo2/n2",
+    path: "/n2",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/demo2/n2").then(({ create }) =>
+          create(),
+        ),
+    },
+  },
 ];
