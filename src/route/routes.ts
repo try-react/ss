@@ -6,7 +6,9 @@ export const routes = [
     path: "/",
     _meta: {
       createContent: () =>
-        import("~/components/environments/top").then(({ create }) => create),
+        import(
+          /* webpackPrefetch: true */ "~/components/environments/top"
+        ).then(({ create }) => create),
     },
   },
   {
@@ -14,7 +16,9 @@ export const routes = [
     path: "/p1",
     _meta: {
       createContent: () =>
-        import("~/components/environments/p1").then(({ create }) => create),
+        import(/* webpackPrefetch: true */ "~/components/environments/p1").then(
+          ({ create }) => create,
+        ),
     },
   },
   {
@@ -22,7 +26,9 @@ export const routes = [
     path: "/p3",
     _meta: {
       createContent: () =>
-        import("~/components/environments/p3").then(({ create }) => create),
+        import(/* webpackPrefetch: true */ "~/components/environments/p3").then(
+          ({ create }) => create,
+        ),
     },
   },
   {
@@ -30,7 +36,9 @@ export const routes = [
     path: "/p4",
     _meta: {
       createContent: () =>
-        import("~/components/environments/p4").then(({ create }) => create),
+        import(/* webpackPrefetch: true */ "~/components/environments/p4").then(
+          ({ create }) => create,
+        ),
     },
   },
   {
@@ -38,7 +46,9 @@ export const routes = [
     path: "/p5",
     _meta: {
       createContent: () =>
-        import("~/components/environments/p5").then(({ create }) => create),
+        import(/* webpackPrefetch: true */ "~/components/environments/p5").then(
+          ({ create }) => create,
+        ),
     },
   },
   {
@@ -46,7 +56,9 @@ export const routes = [
     path: "/p6",
     _meta: {
       createContent: () =>
-        import("~/components/environments/p6").then(({ create }) => create),
+        import(/* webpackPrefetch: true */ "~/components/environments/p6").then(
+          ({ create }) => create,
+        ),
     },
   },
   {
@@ -54,7 +66,9 @@ export const routes = [
     path: "/p7",
     _meta: {
       createContent: () =>
-        import("~/components/environments/p7").then(({ create }) => create),
+        import(/* webpackPrefetch: true */ "~/components/environments/p7").then(
+          ({ create }) => create,
+        ),
     },
   },
   {
@@ -62,7 +76,9 @@ export const routes = [
     path: "/some",
     _meta: {
       createContent: () =>
-        import("~/components/environments/some").then(({ create }) => create),
+        import(
+          /* webpackPrefetch: true */ "~/components/environments/some"
+        ).then(({ create }) => create),
     },
   },
   {
@@ -70,7 +86,9 @@ export const routes = [
     path: "/demo1",
     _meta: {
       createContent: () =>
-        import("~/components/environments/demo1").then(({ create }) => create),
+        import(
+          /* webpackPrefetch: true */ "~/components/environments/demo1"
+        ).then(({ create }) => create),
     },
   },
   {
@@ -78,9 +96,9 @@ export const routes = [
     path: "/:id<\\d+>", // id(数値)の指定
     _meta: {
       createContent: () =>
-        import("~/components/environments/demo1/_id").then(
-          ({ create }) => create,
-        ),
+        import(
+          /* webpackPrefetch: true */ "~/components/environments/demo1/_id"
+        ).then(({ create }) => create),
     },
   },
   {
@@ -88,7 +106,9 @@ export const routes = [
     path: "/demo2",
     _meta: {
       createContent: () =>
-        import("~/components/environments/demo2").then(({ create }) => create),
+        import(
+          /* webpackPrefetch: true */ "~/components/environments/demo2"
+        ).then(({ create }) => create),
     },
   },
   {
@@ -96,9 +116,9 @@ export const routes = [
     path: "/n1",
     _meta: {
       createContent: () =>
-        import("~/components/environments/demo2/n1").then(
-          ({ create }) => create,
-        ),
+        import(
+          /* webpackPrefetch: true */ "~/components/environments/demo2/n1"
+        ).then(({ create }) => create),
     },
   },
   {
@@ -106,9 +126,9 @@ export const routes = [
     path: "/n2",
     _meta: {
       createContent: () =>
-        import("~/components/environments/demo2/n2").then(({ create }) =>
-          create(),
-        ),
+        import(
+          /* webpackPrefetch: true */ "~/components/environments/demo2/n2"
+        ).then(({ create }) => create()),
     },
   },
 ];
