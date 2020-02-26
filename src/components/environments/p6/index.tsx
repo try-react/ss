@@ -1,8 +1,4 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
+import React, { FC } from "react";
+import { FlexBox2 } from "~/components/ecosystems/Some/FlexBox2";
 
-export const create = lazy(() =>
-  import("~/components/ecosystems/Some/FlexBox2").then(({ FlexBox2 }) =>
-    HOC(FlexBox2, {}),
-  ),
-);
+export const Component: FC = () => <FlexBox2 />;

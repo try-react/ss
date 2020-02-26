@@ -1,6 +1,4 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
+import React, { FC } from "react";
+import { Form } from "~/components/ecosystems/Form";
 
-export const create = lazy(() =>
-  import("~/components/ecosystems/Form").then(({ Form }) => HOC(Form, {})),
-);
+export const Component: FC = () => <Form />;

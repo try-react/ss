@@ -1,8 +1,4 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
+import React, { FC } from "react";
+import { BeautifulTxt } from "~/components/ecosystems/BeautifulTxt";
 
-export const create = lazy(() =>
-  import("~/components/ecosystems/BeautifulTxt").then(({ BeautifulTxt }) =>
-    HOC(BeautifulTxt, {}),
-  ),
-);
+export const Component: FC = () => <BeautifulTxt />;

@@ -1,8 +1,4 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
+import React, { FC } from "react";
+import { CSSGrid } from "~/components/ecosystems/Some/CSSGrid";
 
-export const create = lazy(() =>
-  import("~/components/ecosystems/Some/CSSGrid").then(({ CSSGrid }) =>
-    HOC(CSSGrid, {}),
-  ),
-);
+export const Component: FC = () => <CSSGrid />;

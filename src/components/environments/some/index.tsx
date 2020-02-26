@@ -1,6 +1,4 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
+import React, { FC } from "react";
+import { Lazy } from "~/components/ecosystems/Lazy";
 
-export const create = lazy(() =>
-  import("~/components/ecosystems/Lazy").then(({ Lazy }) => HOC(Lazy, {})),
-);
+export const Component: FC = () => <Lazy />;

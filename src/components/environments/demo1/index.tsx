@@ -1,8 +1,4 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
+import React, { FC } from "react";
+import { Router5Demo10 } from "~/components/ecosystems/Router5Demo";
 
-export const create = lazy(() =>
-  import("~/components/ecosystems/Router5Demo").then(({ Router5Demo10 }) =>
-    HOC(Router5Demo10, {}),
-  ),
-);
+export const Component: FC = () => <Router5Demo10 />;

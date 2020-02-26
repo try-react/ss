@@ -1,4 +1,5 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
+import { HOC } from "~/containers/HOC";
 
 export const routes = [
   {
@@ -7,7 +8,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(/* webpackPreload: true */ "~/components/environments/top").then(
-          ({ create }) => create,
+          ({ Component }) => Component,
         ),
     },
   },
@@ -17,7 +18,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(/* webpackPreload: true */ "~/components/environments/p1").then(
-          ({ create }) => create,
+          ({ Component }) => Component,
         ),
     },
   },
@@ -27,7 +28,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(/* webpackPreload: true */ "~/components/environments/p3").then(
-          ({ create }) => create,
+          ({ Component }) => Component,
         ),
     },
   },
@@ -37,7 +38,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(/* webpackPreload: true */ "~/components/environments/p4").then(
-          ({ create }) => create,
+          ({ Component }) => Component,
         ),
     },
   },
@@ -47,7 +48,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(/* webpackPreload: true */ "~/components/environments/p5").then(
-          ({ create }) => create,
+          ({ Component }) => Component,
         ),
     },
   },
@@ -57,7 +58,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(/* webpackPreload: true */ "~/components/environments/p6").then(
-          ({ create }) => create,
+          ({ Component }) => Component,
         ),
     },
   },
@@ -67,7 +68,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(/* webpackPreload: true */ "~/components/environments/p7").then(
-          ({ create }) => create,
+          ({ Component }) => Component,
         ),
     },
   },
@@ -78,7 +79,7 @@ export const routes = [
       createContent: () =>
         import(
           /* webpackPreload: true */ "~/components/environments/some"
-        ).then(({ create }) => create),
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -88,7 +89,7 @@ export const routes = [
       createContent: () =>
         import(
           /* webpackPreload: true */ "~/components/environments/demo1"
-        ).then(({ create }) => create),
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -98,7 +99,7 @@ export const routes = [
       createContent: () =>
         import(
           /* webpackPreload: true */ "~/components/environments/demo1/_id"
-        ).then(({ create }) => create),
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -108,7 +109,7 @@ export const routes = [
       createContent: () =>
         import(
           /* webpackPreload: true */ "~/components/environments/demo2"
-        ).then(({ create }) => create),
+        ).then(({ Component }) => Component),
     },
   },
   {
@@ -118,17 +119,22 @@ export const routes = [
       createContent: () =>
         import(
           /* webpackPreload: true */ "~/components/environments/demo2/n1"
-        ).then(({ create }) => create),
+        ).then(({ Component }) => Component),
     },
   },
   {
     name: "demo2/n2",
     path: "/n2",
     _meta: {
-      createContent: () =>
-        import(
+      createContent: async () => {
+        const fn = await import("~/util/misc").then(
+          ({ lazyFetch }) => lazyFetch,
+        );
+        const data = await fn();
+        return import(
           /* webpackPreload: true */ "~/components/environments/demo2/n2"
-        ).then(({ create }) => create()),
+        ).then(async ({ Component }) => HOC(Component, { data }));
+      },
     },
   },
 ];

@@ -1,13 +1,6 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
-import { lazyFetch } from "~/util/misc";
+import React, { FC } from "react";
+import { Router5Demo22 } from "~/components/ecosystems/Router5Demo";
 
-export const create = async () => {
-  const data = await lazyFetch();
+type Props = Parameters<typeof Router5Demo22>[0];
 
-  return lazy(() =>
-    import("~/components/ecosystems/Router5Demo").then(({ Router5Demo22 }) =>
-      HOC(Router5Demo22, { data }),
-    ),
-  );
-};
+export const Component: FC<Props> = (props) => <Router5Demo22 {...props} />;
