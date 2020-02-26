@@ -6,9 +6,9 @@ export const routes = [
     path: "/",
     _meta: {
       createContent: () =>
-        import(
-          /* webpackPrefetch: true */ "~/components/environments/top"
-        ).then(({ create }) => create),
+        import(/* webpackPreload: true */ "~/components/environments/top").then(
+          ({ create }) => create,
+        ),
     },
   },
   {
@@ -16,7 +16,7 @@ export const routes = [
     path: "/p1",
     _meta: {
       createContent: () =>
-        import(/* webpackPrefetch: true */ "~/components/environments/p1").then(
+        import(/* webpackPreload: true */ "~/components/environments/p1").then(
           ({ create }) => create,
         ),
     },
@@ -26,7 +26,7 @@ export const routes = [
     path: "/p3",
     _meta: {
       createContent: () =>
-        import(/* webpackPrefetch: true */ "~/components/environments/p3").then(
+        import(/* webpackPreload: true */ "~/components/environments/p3").then(
           ({ create }) => create,
         ),
     },
@@ -36,7 +36,7 @@ export const routes = [
     path: "/p4",
     _meta: {
       createContent: () =>
-        import(/* webpackPrefetch: true */ "~/components/environments/p4").then(
+        import(/* webpackPreload: true */ "~/components/environments/p4").then(
           ({ create }) => create,
         ),
     },
@@ -46,7 +46,7 @@ export const routes = [
     path: "/p5",
     _meta: {
       createContent: () =>
-        import(/* webpackPrefetch: true */ "~/components/environments/p5").then(
+        import(/* webpackPreload: true */ "~/components/environments/p5").then(
           ({ create }) => create,
         ),
     },
@@ -56,7 +56,7 @@ export const routes = [
     path: "/p6",
     _meta: {
       createContent: () =>
-        import(/* webpackPrefetch: true */ "~/components/environments/p6").then(
+        import(/* webpackPreload: true */ "~/components/environments/p6").then(
           ({ create }) => create,
         ),
     },
@@ -66,7 +66,7 @@ export const routes = [
     path: "/p7",
     _meta: {
       createContent: () =>
-        import(/* webpackPrefetch: true */ "~/components/environments/p7").then(
+        import(/* webpackPreload: true */ "~/components/environments/p7").then(
           ({ create }) => create,
         ),
     },
@@ -77,7 +77,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPrefetch: true */ "~/components/environments/some"
+          /* webpackPreload: true */ "~/components/environments/some"
         ).then(({ create }) => create),
     },
   },
@@ -87,7 +87,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPrefetch: true */ "~/components/environments/demo1"
+          /* webpackPreload: true */ "~/components/environments/demo1"
         ).then(({ create }) => create),
     },
   },
@@ -97,7 +97,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPrefetch: true */ "~/components/environments/demo1/_id"
+          /* webpackPreload: true */ "~/components/environments/demo1/_id"
         ).then(({ create }) => create),
     },
   },
@@ -107,7 +107,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPrefetch: true */ "~/components/environments/demo2"
+          /* webpackPreload: true */ "~/components/environments/demo2"
         ).then(({ create }) => create),
     },
   },
@@ -117,7 +117,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPrefetch: true */ "~/components/environments/demo2/n1"
+          /* webpackPreload: true */ "~/components/environments/demo2/n1"
         ).then(({ create }) => create),
     },
   },
@@ -127,7 +127,7 @@ export const routes = [
     _meta: {
       createContent: () =>
         import(
-          /* webpackPrefetch: true */ "~/components/environments/demo2/n2"
+          /* webpackPreload: true */ "~/components/environments/demo2/n2"
         ).then(({ create }) => create()),
     },
   },
