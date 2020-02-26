@@ -3,7 +3,6 @@
 export const routes = [
   { name: "top", path: "/" },
   { name: "p1", path: "/p1" },
-  { name: "p2", path: "/p2" },
   { name: "p3", path: "/p3" },
   { name: "p4", path: "/p4" },
   { name: "p5", path: "/p5" },

@@ -37,6 +37,7 @@
     "react-router5": "7.1.0",
     "router5": "7.0.2",
     "router5-plugin-browser": "7.0.2",
+    "rxjs": "6.5.4",
     "styled-components": "5.0.1",
     "stylelint": "13.2.0",
     "stylelint-config-standard": "20.0.0",
