@@ -10,7 +10,11 @@ import React, { FC, useEffect, useState } from "react";
 import { Subject } from "rxjs";
 
 export const subject = new Subject<FC<{}>>();
-const C: FC = () => <>準備中✍️</>;
+const C: FC = () => (
+  <div>
+    🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉🍉
+  </div>
+);
 
 const useContent = () => {
   const [Component, setComponent] = useState({ Component: C });
