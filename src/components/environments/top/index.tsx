@@ -1,4 +1,8 @@
-import React, { FC } from "react";
-import { ContentList } from "~/components/ecosystems/ContentList";
+import React, { FC, lazy } from "react";
+const C = lazy(() =>
+  import("~/components/ecosystems/ContentList").then(({ ContentList }) => ({
+    default: ContentList,
+  })),
+);
 
-export const Component: FC = () => <ContentList />;
+export const Component: FC = () => <C />;

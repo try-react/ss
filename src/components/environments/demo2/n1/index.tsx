@@ -1,4 +1,8 @@
-import React, { FC } from "react";
-import { Router5Demo21 } from "~/components/ecosystems/Router5Demo";
+import React, { FC, lazy } from "react";
+const C = lazy(() =>
+  import("~/components/ecosystems/Router5Demo").then(({ Router5Demo21 }) => ({
+    default: Router5Demo21,
+  })),
+);
 
-export const Component: FC = () => <Router5Demo21 />;
+export const Component: FC = () => <C />;

@@ -1,4 +1,8 @@
-import React, { FC } from "react";
-import { BeautifulTxt } from "~/components/ecosystems/BeautifulTxt";
+import React, { FC, lazy } from "react";
+const C = lazy(() =>
+  import("~/components/ecosystems/BeautifulTxt").then(({ BeautifulTxt }) => ({
+    default: BeautifulTxt,
+  })),
+);
 
-export const Component: FC = () => <BeautifulTxt />;
+export const Component: FC = () => <C />;

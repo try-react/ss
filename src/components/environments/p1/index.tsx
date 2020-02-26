@@ -1,4 +1,8 @@
-import React, { FC } from "react";
-import { Form } from "~/components/ecosystems/Form";
+import React, { FC, lazy } from "react";
+const C = lazy(() =>
+  import("~/components/ecosystems/Form").then(({ Form }) => ({
+    default: Form,
+  })),
+);
 
-export const Component: FC = () => <Form />;
+export const Component: FC = () => <C />;

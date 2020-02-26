@@ -1,4 +1,8 @@
-import React, { FC } from "react";
-import { FlexBox } from "~/components/ecosystems/Some/FlexBox";
+import React, { FC, lazy } from "react";
+const C = lazy(() =>
+  import("~/components/ecosystems/Some/FlexBox").then(({ FlexBox }) => ({
+    default: FlexBox,
+  })),
+);
 
-export const Component: FC = () => <FlexBox />;
+export const Component: FC = () => <C />;

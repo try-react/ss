@@ -127,10 +127,8 @@ export const routes = [
     path: "/n2",
     _meta: {
       createContent: async () => {
-        const fn = await import("~/util/misc").then(
-          ({ lazyFetch }) => lazyFetch,
-        );
-        const data = await fn();
+        const { lazyFetch } = await import("~/util/misc");
+        const data = await lazyFetch();
         return import(
           /* webpackPreload: true */ "~/components/environments/demo2/n2"
         ).then(async ({ Component }) => HOC(Component, { data }));
