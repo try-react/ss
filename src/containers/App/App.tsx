@@ -15,7 +15,7 @@ export class App extends React.PureComponent {
           <GlobalStyle />
           <ErrorBoundary>
             <RouterProvider router={router}>
-              <Suspense fallback={null}>
+              <Suspense fallback="✍️">
                 <Page />
               </Suspense>
             </RouterProvider>

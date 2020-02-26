@@ -4,6 +4,7 @@ import { subject } from "~/containers/Page/contents/Content";
 
 type Middleware = Parameters<Router["useMiddleware"]>[0];
 export const middleware: Middleware = () => async (toState) => {
+  // src/containers/Page/contents/Content.tsx の更新
   subject.next(await create(toState.name));
   return new Promise((r) => r({ ...toState }));
 };
