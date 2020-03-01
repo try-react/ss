@@ -1,8 +1,8 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
-
-export const createPage = lazy(() =>
-  import("~/components/ecosystems/ContentList").then(({ ContentList }) =>
-    HOC(ContentList, {}),
-  ),
+import React, { FC, lazy } from "react";
+const C = lazy(() =>
+  import("~/components/ecosystems/ContentList").then(({ ContentList }) => ({
+    default: ContentList,
+  })),
 );
+
+export const Component: FC = () => <C />;

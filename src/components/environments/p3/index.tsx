@@ -1,8 +1,8 @@
-import { lazy } from "react";
-import { HOC } from "~/containers/HOC";
-
-export const createPage = lazy(() =>
-  import("~/components/ecosystems/BeautifulTxt").then(({ BeautifulTxt }) =>
-    HOC(BeautifulTxt, {}),
-  ),
+import React, { FC, lazy } from "react";
+const C = lazy(() =>
+  import("~/components/ecosystems/BeautifulTxt").then(({ BeautifulTxt }) => ({
+    default: BeautifulTxt,
+  })),
 );
+
+export const Component: FC = () => <C />;

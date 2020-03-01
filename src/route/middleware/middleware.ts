@@ -1,86 +1,16 @@
 import { Router, State } from "router5";
 import { throwError } from "~/util/misc";
 import { subject } from "~/containers/Page/contents/Content";
+import { routes } from "~/route";
 
 type Middleware = Parameters<Router["useMiddleware"]>[0];
 export const middleware: Middleware = () => async (toState) => {
-  // src/containers/Page/contents/Content.tsx の更新
-  subject.next(await create(toState.name));
+  subject.next(await createContent(toState.name));
   return new Promise((r) => r({ ...toState }));
 };
 
-const create = (name: State["name"]) => {
-  if (name === "demo2.n2") {
-    return import("~/components/environments/demo2/n2").then(({ createPage }) =>
-      createPage(),
-    );
-  }
+const createContent = (name: State["name"]) => {
+  const [r] = routes.filter((v) => v.name === name);
 
-  if (name === "p1") {
-    return import("~/components/environments/p1").then(
-      ({ createPage }) => createPage,
-    );
-  }
-
-  if (name === "top") {
-    return import("~/components/environments/top").then(
-      ({ createPage }) => createPage,
-    );
-  }
-
-  if (name === "p3") {
-    return import("~/components/environments/p3").then(
-      ({ createPage }) => createPage,
-    );
-  }
-  if (name === "p4") {
-    return import("~/components/environments/p4").then(
-      ({ createPage }) => createPage,
-    );
-  }
-  if (name === "p5") {
-    return import("~/components/environments/p5").then(
-      ({ createPage }) => createPage,
-    );
-  }
-  if (name === "p6") {
-    return import("~/components/environments/p6").then(
-      ({ createPage }) => createPage,
-    );
-  }
-  if (name === "p7") {
-    return import("~/components/environments/p7").then(
-      ({ createPage }) => createPage,
-    );
-  }
-
-  if (name === "some") {
-    return import("~/components/environments/some").then(
-      ({ createPage }) => createPage,
-    );
-  }
-  if (name === "demo1") {
-    return import("~/components/environments/demo1").then(
-      ({ createPage }) => createPage,
-    );
-  }
-  if (name === "demo1.id") {
-    return import("~/components/environments/demo1/_id").then(
-      ({ createPage }) => createPage,
-    );
-  }
-
-  if (name === "demo2") {
-    return import("~/components/environments/demo2").then(
-      ({ createPage }) => createPage,
-    );
-  }
-
-  if (name === "demo2.n1") {
-    return import("~/components/environments/demo2/n1").then(
-      ({ createPage }) => createPage,
-    );
-  }
-
-  return throwError("ページが見つからない");
+  return r ? r._meta.createContent() : throwError("ページが見つからない");
 };

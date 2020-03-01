@@ -8,18 +8,16 @@ import { Footer } from "./contents/Footer";
 import { useProgress } from "~/hooks/useProgress";
 import { Progress } from "~/components/atoms/Progress";
 
-export const Page: FC = () => {
-  return (
-    <>
-      <Header />
-      <main>
-        <Progress {...useProgress()} />
-        <Content />
-        <Article />
-        <Section />
-      </main>
-      <Aside />
-      <Footer />
-    </>
-  );
-};
+export const Page: FC = () => (
+  <>
+    <Header />
+    <main>
+      <Progress {...useProgress()} />
+      <Content />
+      <Article />
+      <Section />
+    </main>
+    <Aside />
+    <Footer />
+  </>
+);
