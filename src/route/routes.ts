@@ -83,6 +83,16 @@ export const routes = [
     },
   },
   {
+    name: "some2",
+    path: "/some2",
+    _meta: {
+      createContent: () =>
+        import("~/components/environments/some2").then(
+          ({ Component }) => Component,
+        ),
+    },
+  },
+  {
     name: "demo1",
     path: "/demo1",
     _meta: {
