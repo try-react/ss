@@ -15,7 +15,7 @@ export class App extends React.PureComponent {
           <GlobalStyle />
           <ErrorBoundary>
             <RouterProvider router={router}>
-              <Suspense fallback="阿部 寛">
+              <Suspense fallback="App準備中">
                 <Page />
               </Suspense>
             </RouterProvider>
