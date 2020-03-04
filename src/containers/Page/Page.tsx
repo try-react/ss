@@ -5,14 +5,11 @@ import { Article } from "./contents/Article";
 import { Section } from "./contents/Section";
 import { Aside } from "./contents/Aside";
 import { Footer } from "./contents/Footer";
-import { useProgress } from "~/hooks/useProgress";
-import { Progress } from "~/components/atoms/Progress";
 
 export const Page: FC = () => (
   <>
     <Header />
     <main>
-      <Progress {...useProgress()} />
       <Content />
       <Article />
       <Section />
