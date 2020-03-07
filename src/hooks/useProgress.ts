@@ -1,7 +1,7 @@
 /**
  * 遷移中の progress
  */
-import { progressService } from "~/state";
+import { progressService } from "~/state/progress";
 import { useService } from "@xstate/react";
 import { useNProgress } from "@tanem/react-nprogress";
 

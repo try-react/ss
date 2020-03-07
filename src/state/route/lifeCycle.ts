@@ -1,5 +1,5 @@
 import { Router } from "router5";
-import { progressService } from "~/state";
+import { progressService } from "~/state/progress";
 
 type LifeCycle = Parameters<Router["usePlugin"]>[0];
 
