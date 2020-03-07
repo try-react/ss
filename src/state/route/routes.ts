@@ -74,6 +74,16 @@ export const routes = [
     },
   },
   {
+    name: "p8",
+    path: "/p8",
+    _meta: {
+      transition: () =>
+        import("~/components/environments/p8").then(({ Component }) =>
+          contentSubject.next(Component),
+        ),
+    },
+  },
+  {
     name: "some",
     path: "/some",
     _meta: {

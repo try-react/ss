@@ -1,9 +1,9 @@
-import React, { StrictMode, Suspense, FC } from "react";
+import React, { StrictMode, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "~/containers/Style";
 import { ErrorBoundary } from "~/containers/ErrorBoundary";
 import { RouterProvider } from "react-router5";
-import { router } from "~/route";
+import { router } from "~/state/route";
 import { theme } from "~/theme";
 import { Page } from "~/containers/Page";
 import { ProgressBar } from "~/components/ecosystems/Loading";

@@ -1,5 +1,5 @@
 import { Router } from "router5";
-import { routes } from "~/route";
+import { routes } from "~/state/route";
 
 type Middleware = Parameters<Router["useMiddleware"]>[0];
 export const middleware: Middleware = () => async (toState) => {
