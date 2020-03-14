@@ -9,6 +9,12 @@ const init = () => {
   router.start();
 };
 
+export const stop = () => {
+  progressService.stop();
+  router.stop();
+  history.pushState([], "", "");
+};
+
 const findTarget = (name: string) => document.getElementById(name);
 
 init();

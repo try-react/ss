@@ -14,6 +14,7 @@ const observerFn = (setComponent: SetComponent) => () => {
   contentSubject.subscribe({
     next: (p) => setComponent({ Component: p }),
   });
+  return () => contentSubject.unsubscribe();
 };
 
 /**
@@ -23,10 +24,15 @@ const observerFn = (setComponent: SetComponent) => () => {
 const useContent = () => {
   const { Component, setComponent } = useComponent();
   useEffect(observerFn(setComponent), [setComponent]);
+
   return Component;
 };
 
 export const Content: FC = () => {
   const { Component } = useContent();
-  return <Component />;
+  return (
+    <>
+      <Component />
+    </>
+  );
 };
