@@ -1,69 +1,9 @@
-/**
- *
- * 実験的なコードではあるが、Contextに出来ない事は無い気がする
- *
- * Contextの state & dispatch を useStateから生成
- * type safeなdispatchが可能
- *
- */
-import React, {
-  FC,
-  useState,
-  useContext,
-  createContext,
-  useEffect,
-} from "react";
-import { Subject } from "rxjs";
+import React, { FC, useContext } from "react";
 
-const useSomeReducer = () => {
-  const [stringV, setStringV] = useState({ str: "" });
-  const [numV, setNumV] = useState({ num: 123 });
-  return {
-    dispatch: {
-      setNumV,
-      setStringV,
-    },
-    state: {
-      numV,
-      stringV,
-    },
-  };
-};
+import { SomeContext, someSubject } from "~/containers/Context/SomeContext";
 
-type SetStringV = ReturnType<typeof useSomeReducer>["dispatch"]["setStringV"];
-
-// ------------------------------------
-// store.dispatch() 相当
-const subject = new Subject<string>();
-const observerFn = (setStringV: SetStringV) => () => {
-  subject.subscribe({
-    next: (p) => setStringV({ str: p }),
-  });
-};
-setTimeout(() => subject.next("Component以外から操作"), 8000);
-// ------------------------------------
-
-const useSome = () => {
-  const { state, dispatch } = useSomeReducer();
-  useEffect(observerFn(dispatch.setStringV), [dispatch.setStringV]);
-  return {
-    dispatch,
-    state,
-  };
-};
-
-// @ts-ignore まーこれは しゃーない
-const SomeContext = createContext<ReturnType<typeof useSome>>();
-
-const SomeContextProvider: FC = ({ children }) => {
-  const { state, dispatch } = useSome();
-
-  return (
-    <SomeContext.Provider value={{ dispatch, state }}>
-      {children}
-    </SomeContext.Provider>
-  );
-};
+// store.dispatch() 相当であるが このコンポーネントが1度はレンダリングされる必要がある
+someSubject.next("ok");
 
 const ICA: FC = () => {
   const { state, dispatch } = useContext(SomeContext);
@@ -93,9 +33,9 @@ const ICB: FC = () => {
   );
 };
 export const Try: FC = () => (
-  <SomeContextProvider>
+  <>
     <ICA />
     <hr />
     <ICB />
-  </SomeContextProvider>
+  </>
 );
