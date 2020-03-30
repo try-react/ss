@@ -1235,10 +1235,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@tanem/react-nprogress@3.0.18":
-  version "3.0.18"
-  resolved "https://registry.yarnpkg.com/@tanem/react-nprogress/-/react-nprogress-3.0.18.tgz#747055ebd53f38c32e412c8578e26b5039969d76"
-  integrity sha512-gD7hE3uDuWel0n0eRfKKmXPY9PiYJB/Ca4MjtBlqnoq/9hbCJvZss/HuOmDSQPxTRj8KhGfUOHEzw6eFhoCx1w==
+"@tanem/react-nprogress@3.0.19":
+  version "3.0.19"
+  resolved "https://registry.yarnpkg.com/@tanem/react-nprogress/-/react-nprogress-3.0.19.tgz#c0bec53f87d0949d6d353b01e447ccade198ae25"
+  integrity sha512-BzKc/cp/AqdpIjb1rOCuqrr7AG7enTUioX05ikGgNQmMuRGbpOiC4NscJio0Nfi5dss00OPWkZxC33e5bIfOww==
   dependencies:
     "@babel/runtime" "^7.8.7"
     hoist-non-react-statics "^3.3.2"
