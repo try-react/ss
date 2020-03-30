@@ -20,7 +20,7 @@
     "@babel/preset-env": "7.9.0",
     "@babel/preset-react": "7.9.1",
     "@babel/preset-typescript": "7.9.0",
-    "@cybozu/eslint-config": "10.0.1",
+    "@cybozu/eslint-config": "10.0.2",
     "@tanem/react-nprogress": "3.0.18",
     "@xstate/react": "0.8.1",
     "babel-loader": "8.0.6",
