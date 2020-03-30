@@ -34,7 +34,7 @@
     "prettier": "2.0.2",
     "react": "16.13.0",
     "react-dom": "16.13.0",
-    "react-router5": "8.0.0",
+    "react-router5": "8.0.1",
     "router5": "8.0.0",
     "router5-plugin-browser": "8.0.0",
     "rxjs": "6.5.4",
