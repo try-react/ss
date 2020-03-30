@@ -8117,12 +8117,12 @@ react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-router5@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/react-router5/-/react-router5-8.0.0.tgz#611aed142c20948a6c5f511ed196b4ee95d9bedd"
-  integrity sha512-TKeRIBjqjWuvLRB3kzOVyirCYkztJ2LQFa4qOq6je1zN0AlD3vyhB1urKGAd42qKap440KdsWTOQA/0QHz+KTg==
+react-router5@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/react-router5/-/react-router5-8.0.1.tgz#18fdde01b2ac36854b0129fa4e0d4b35ddb4ef7f"
+  integrity sha512-jdkhOql49DOjeF+O77mSfnyOyrXPpQKpSi/TdrDkS9lGrzeJWtgxpUEglHLaIhzrMOGhmqr6vosoh4dtExkzMQ==
   dependencies:
-    router5-transition-path "^8.0.0"
+    router5-transition-path "^8.0.1"
 
 react-use@^13.27.0:
   version "13.27.0"
@@ -8605,10 +8605,10 @@ router5-plugin-browser@8.0.0:
   resolved "https://registry.yarnpkg.com/router5-plugin-browser/-/router5-plugin-browser-8.0.0.tgz#0271e1df148944b3d30e3de5d31af1fb58068b74"
   integrity sha512-JcyVLnJrzwVQN2ObxWvgiOFw43NaXSiEvAn2v0oQl45pTHnjGCMD0sEyFFkLgSrWja0mr08HLcgF6wvIv5z3Yg==
 
-router5-transition-path@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/router5-transition-path/-/router5-transition-path-8.0.0.tgz#cd0431d9d7b64dfb9681056ebb4f3dde58ba143a"
-  integrity sha512-3z69OYHsZf0WzMIVi20XKfHiSbsZvTBrWjh4DdpEoYwh+LIsB7mb+CqL7hONeBw/mlkHmf/XJL/rzjlYwRgdpw==
+router5-transition-path@^8.0.0, router5-transition-path@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/router5-transition-path/-/router5-transition-path-8.0.1.tgz#51bfc8adcee3e3b2b6872ac8252d74b501ae3e96"
+  integrity sha512-l7MFEUmasEhe1emrO79t7BkCqQQRZdenz4c3qJmZpe8V6BCerZQR+SYbZL5zmQ3hazY7nR264jCWuNed+cMD2A==
 
 router5@8.0.0:
   version "8.0.0"
