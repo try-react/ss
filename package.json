@@ -23,7 +23,7 @@
     "@cybozu/eslint-config": "10.0.2",
     "@tanem/react-nprogress": "3.0.18",
     "@xstate/react": "0.8.1",
-    "babel-loader": "8.0.6",
+    "babel-loader": "8.1.0",
     "babel-plugin-module-resolver": "4.0.0",
     "babel-plugin-react-remove-properties": "0.3.0",
     "eslint-plugin-sort-keys-fix": "1.1.0",
