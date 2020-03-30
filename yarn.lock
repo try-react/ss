@@ -8600,10 +8600,10 @@ route-node@4.1.1:
     search-params "3.0.0"
     tslib "^1.10.0"
 
-router5-plugin-browser@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/router5-plugin-browser/-/router5-plugin-browser-8.0.0.tgz#0271e1df148944b3d30e3de5d31af1fb58068b74"
-  integrity sha512-JcyVLnJrzwVQN2ObxWvgiOFw43NaXSiEvAn2v0oQl45pTHnjGCMD0sEyFFkLgSrWja0mr08HLcgF6wvIv5z3Yg==
+router5-plugin-browser@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/router5-plugin-browser/-/router5-plugin-browser-8.0.1.tgz#30a15fc59ed4d59020587cfc5452b5443b1a3290"
+  integrity sha512-RuArnalkREtQj0ROD1RnITWwL+Fl8rbkFspDxRTt3aFG9k5bPOE0HfJRvGsd4TY9Je/kW3hvntvFXSx8Bl745w==
 
 router5-transition-path@^8.0.0, router5-transition-path@^8.0.1:
   version "8.0.1"
