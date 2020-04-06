@@ -8283,18 +8283,18 @@ router5-plugin-browser@8.0.1:
   resolved "https://registry.yarnpkg.com/router5-plugin-browser/-/router5-plugin-browser-8.0.1.tgz#30a15fc59ed4d59020587cfc5452b5443b1a3290"
   integrity sha512-RuArnalkREtQj0ROD1RnITWwL+Fl8rbkFspDxRTt3aFG9k5bPOE0HfJRvGsd4TY9Je/kW3hvntvFXSx8Bl745w==
 
-router5-transition-path@^8.0.0, router5-transition-path@^8.0.1:
+router5-transition-path@^8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/router5-transition-path/-/router5-transition-path-8.0.1.tgz#51bfc8adcee3e3b2b6872ac8252d74b501ae3e96"
   integrity sha512-l7MFEUmasEhe1emrO79t7BkCqQQRZdenz4c3qJmZpe8V6BCerZQR+SYbZL5zmQ3hazY7nR264jCWuNed+cMD2A==
 
-router5@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/router5/-/router5-8.0.0.tgz#28cd8112b8d3bcab3de98766a179ececdd4a7bae"
-  integrity sha512-HYXB94yBZTTK0HrbZyGjOMPc3H+5TjzodY9KctIjgyNB44nuT85y4jjUtm0ufvTPXji0xyPphzKJUa1BpLRHMg==
+router5@8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/router5/-/router5-8.0.1.tgz#8ef47dce54a3da2c05b222ba0dd0a5f35871e64d"
+  integrity sha512-LBLQAYd2ZI1FiiBqGf82oC+LRD0PUABrZqTzd6OmyK+t5N8wRs3hbIxeiy/9Zy+xI8Fdf/0WM68P41W6MH8pdQ==
   dependencies:
     route-node "4.1.1"
-    router5-transition-path "^8.0.0"
+    router5-transition-path "^8.0.1"
     symbol-observable "1.2.0"
 
 rsvp@^4.8.4:
