@@ -39,7 +39,7 @@
     "router5-plugin-browser": "8.0.1",
     "rxjs": "6.5.4",
     "styled-components": "5.0.1",
-    "stylelint": "13.3.0",
+    "stylelint": "13.3.2",
     "stylelint-config-standard": "20.0.0",
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-order": "4.0.0",
