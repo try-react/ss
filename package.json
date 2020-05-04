@@ -33,7 +33,7 @@
     "jest": "25.3.0",
     "prettier": "2.0.5",
     "react": "16.13.1",
-    "react-dom": "16.13.0",
+    "react-dom": "16.13.1",
     "react-router5": "8.0.1",
     "router5": "8.0.1",
     "router5-plugin-browser": "8.0.1",
